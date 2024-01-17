@@ -12,7 +12,7 @@ body, html {
     height: 100vh;
 }
 
-.content {
+.fairy {
     text-align: center;
     position: absolute;
     top: 50%;
@@ -23,7 +23,7 @@ body, html {
 .Fairy {
     max-width: 100%;
     height: auto;
-    width: 300px;
+    width: 250px;
 }
 
 /*.Tribal1 {
