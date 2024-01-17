@@ -1,7 +1,7 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Courier', sans-serif;
+    font-family: 'FaerieFont', sans-serif;
     color:blue;
 }
 
@@ -26,6 +26,37 @@ body, html {
     width: 250px;
 }
 
+.bandit{
+    text-align: center;
+    position: absolute;
+    top: 72%;
+    left:0.5%;
+    transform: translate(0%, 0%);
+}
+
+.Bandit{
+    max-width: 100%;
+    height: auto;
+    width: 100px;
+}
+
+#hiddenAnomalies{
+    text-align: center;
+    position: absolute;
+    top: 90%;
+    left: 7%;
+    transform: translate(0%, 0%);
+    display: flex;
+}
+
+#hiddenAnomalies img {
+    max-width: 100%;
+    height: auto;
+    width: 50px;
+    margin-right: 5px; /* Add margin between images */
+}
+
+
 /*.Tribal1 {
     max-width: 100%;
     height: auto;
@@ -33,3 +64,10 @@ body, html {
     bottom: 0;
     left: 0;
 }*/
+
+@font-face {
+    font-family: 'FaerieFont';;
+    src: url('fonts/FairiesGoneWildPlus-K5ae.otf') format('otf'); /* Adjust the path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}

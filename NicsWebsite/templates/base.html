@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </head>
 <body>
     <div class="background"></div>
@@ -13,6 +14,25 @@
         <img class = "Tribal1" src="{{ url_for('static', filename='resources/technoTribal4.jpg') }}" alt="TT1">
         <img src="{{ url_for('static', filename='resources/unicorn.gif') }}" alt="Unicorn">
         <img src="{{ url_for('static', filename='resources/good-angel-pretty2.gif') }}" alt="Angel Gif"> -->
+    </div>
+    <div class="bandit">
+        <img class = "Bandit" src="{{ url_for('static', filename='resources/stalker_bandit1.webp') }}" alt="Bandit", onclick="toggleAnomalies()">
+    </div>
+
+    <!--- hidden anomalies show when bandit is clicked-->
+    <div id="hiddenAnomalies" style="display: none;">
+        <a href="https://www.youtube.com/@MajorMarvey" target="_blank">
+            <img src="{{ url_for('static', filename='resources/anomaly1.webp') }}" alt="Anomaly1">
+        </a>
+        <a href="https://soundcloud.com/nicsuja" target="_blank">
+            <img src="{{ url_for('static', filename='resources/anomaly2.webp') }}" alt="Anomaly2">
+        </a>
+        <a href="https://www.vice.com/en/article/88xej5/speed-two-weeks-learn-polish-language" target="_blank">
+            <img src="{{ url_for('static', filename='resources/anomaly3.webp') }}" alt="Anomaly3">
+        </a>
+        <a href="" target="_blank">
+            <img src="{{ url_for('static', filename='resources/anomaly4.webp') }}" alt="Anomaly4">
+        </a>
     </div>
 </body>
 </html>
