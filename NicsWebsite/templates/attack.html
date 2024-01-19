@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='attack.css') }}">
+    <script src="{{ url_for('static', filename='js/attack.js') }}"></script>
+</head>
+<body>
+    <!-- 
+    <div class="fairy">
+        <img class = "Fairy" src="{{ url_for('static', filename='resources/fairy-glittery.gif') }}" alt="Fairy">
+
+    </div>
+    --->
+    <!---<h1>FORBIDDEN WEBSITE AREA</h1>--->
+    <div class="background"></div>
+    <audio id="backgroundSound" muted>
+        <source src="{{ url_for('static', filename='resources/BloodyBlades.mp3') }}" type="audio/mp3">
+    </audio>
+
+    <div class="npc1">
+        <img class = "NPC1" src="{{ url_for('static', filename='resources/attackingNPC.gif') }}" alt="npc1", onclick="playNPCNoise()">
+    </div>
+
+    <div class="npc2">
+        <img class = "NPC2" src="{{ url_for('static', filename='resources/goblin.gif') }}" alt="gobling">
+    </div>
+
+    <audio id="randomSound" preload="auto"></audio>
+</body>
+</html>

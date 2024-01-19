@@ -2,69 +2,54 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'FaerieFont', sans-serif;
-    color:blue;
     cursor: url('resources/glove_idle.png'), auto;
+    color:blue;
 }
 
 .background {
-    background-image: url('resources/space2.gif');  /* Replace 'background.jpg' with your image file */
-    background-repeat: repeat;  /* Set to 'repeat', 'repeat-x', or 'repeat-y' as needed */
-    background-size: cover;  /* Adjust as needed */
+    background-image: url('resources/Tqvv.gif');  /* Replace 'background.jpg' with your image file */
+    background-repeat: repeat;  /* Set to 'repeat', 'repeat-x', or 'repeat-y' as needed */  /* Adjust as needed */
     height: 100vh;
 }
 
-.fairy {
+/*.h1 {
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.Fairy {
-    max-width: 100%;
-    height: auto;
-    width: 250px;
-}
-
-.bandit{
-    text-align: center;
-    position: absolute;
-    top: 72%;
-    left:0.5%;
-    transform: translate(0%, 0%);
-}
-
-.Bandit{
-    max-width: 100%;
-    height: auto;
-    width: 100px;
-}
-
-#hiddenAnomalies{
-    text-align: center;
-    position: absolute;
-    top: 90%;
-    left: 7%;
-    transform: translate(0%, 0%);
-    display: flex;
-}
-
-#hiddenAnomalies img {
-    max-width: 100%;
-    height: auto;
-    width: 50px;
-    margin-right: 5px; /* Add margin between images */
-}
-
-
-/*.Tribal1 {
-    max-width: 100%;
-    height: auto;
-    width: 150px;
-    bottom: 0;
-    left: 0;
 }*/
+
+/*TODO: FAIRY FONT DOESNT WORK*/
+/*TODO: SOUND FILES CANNOT BE FOUDN*/
+/*TODO: add image/click navigation to forbidden page*/
+.npc1{
+    text-align: center;
+    position: absolute;
+    top: 66%;
+    left:85%;
+    transform: translate(0%, 0%);
+}
+
+.NPC1{
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+}
+
+.npc2{
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left:21%;
+    transform: translate(0%, 0%);
+}
+
+.NPC2{
+    max-width: 100%;
+    height: auto;
+    width: 170px;
+}
 
 @font-face {
     font-family: 'FaerieFont';;
