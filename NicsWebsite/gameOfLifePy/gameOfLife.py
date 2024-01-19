@@ -7,6 +7,12 @@ import numpy as np
 #A living cell with more than three living neighboring cells dies in the next time step.
 #A dead cell is revived if it has exactly three living neighboring cells.
 
+#COLOUR DEFINITIONS
+col_about_to_die = (200, 200, 225)
+aliveColour = (255, 255, 215)
+backgroundColour = (10, 10, 40)
+gridColour = (30, 30, 60)
+
 def generate_blank_pattern(dimy, dimx): #returns a blank array of cells
     cells = np.zeros((dimy, dimx))
     return cells
@@ -27,7 +33,9 @@ def update(gameSurface, oldPattern, pixelSize):
     #cur = current pattern
     #sz = meta size for pixels in game holder
     #surface = the gameObject
-    newPattern = generate_blank_pattern()
+    y, x = oldPattern.shape
+
+    newPattern = generate_blank_pattern(y, x)
 
     for y, x in np.ndindex(oldPattern.shape):
         #[r-1 is previous cells, r+2=r+1 because of upper indexing, same as [r-1:r+1), ]
@@ -41,7 +49,8 @@ def update(gameSurface, oldPattern, pixelSize):
             newPattern[y,x] = 0 #any other situation and the cell dies
 
         #why is this draw step here?
-        pg.draw.rect(gameSurface, newPattern, (x*pixelSize, y*pixelSize, pixelSize-1, pixelSize-1))
+        colours = aliveColour if newPattern[y, x] == 1 else backgroundColour
+        pg.draw.rect(gameSurface, colours, (x*pixelSize, y*pixelSize, pixelSize-1, pixelSize-1))
     
     return newPattern
 
@@ -57,7 +66,6 @@ def main(dimx, dimy, cellsize):
     #pg.display.set_caption("John Conway's Game of Life")
 
     cells = init(dimx, dimy)
-    surface.fill(cells)
 
     while True:
         for event in pg.event.get():
@@ -65,6 +73,11 @@ def main(dimx, dimy, cellsize):
                 pg.quit()
                 return
 
+        surface.fill(gridColour)
         cells = update(surface, cells, cellsize)
         #surface.fill(cells) uncomment?
         pg.display.update()
+
+if __name__ == "__main__":
+    #TODO: ask user to input dimensions here
+    main(100, 100, 4)
