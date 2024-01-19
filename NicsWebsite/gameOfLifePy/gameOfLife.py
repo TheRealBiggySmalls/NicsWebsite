@@ -57,10 +57,10 @@ def update(gameSurface, oldPattern, pixelSize):
 def main(dimx, dimy, cellsize):
 
     #upper constraints on size in case of silly buggers
-    if dimx >200:
-        dimx = 200
-    if dimy >200:
-        dimy=200
+    if dimx >150:
+        dimx = 150
+    if dimy >150:
+        dimy=150
 
     surface = pg.display.set_mode((dimx * cellsize, dimy * cellsize))
     #pg.display.set_caption("John Conway's Game of Life")
@@ -80,4 +80,9 @@ def main(dimx, dimy, cellsize):
 
 if __name__ == "__main__":
     #TODO: ask user to input dimensions here
-    main(100, 100, 4)
+    main(150, 150, 4)
+
+
+
+
+#TODO: make game of life but it's x and dots printed

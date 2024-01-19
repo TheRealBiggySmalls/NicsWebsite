@@ -12,5 +12,9 @@ def home():
 def attack():
     return render_template("attack.html")
 
+@app.route("/creation")
+def creation():
+    return render_template("creation.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
