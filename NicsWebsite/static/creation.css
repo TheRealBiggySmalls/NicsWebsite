@@ -17,8 +17,12 @@ html:active {
     height: 100vh;
 }
 
-#gridContainer {
-    padding-bottom: 10px;
+#gameContainer {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 table { /*TODO: ALTER COLOURS TO BLACK AND WHITE*/
@@ -27,14 +31,14 @@ table { /*TODO: ALTER COLOURS TO BLACK AND WHITE*/
 }
 
 td {
-    border: 1px solid #424a3c;
+    border: 1px solid #d9db55;
     border-radius: 3px;
     width: 10px;
     height: 10px;
 }
 
 span {
-    color: #222;
+    color: #d30c0c;
 }
 
 td.dead {

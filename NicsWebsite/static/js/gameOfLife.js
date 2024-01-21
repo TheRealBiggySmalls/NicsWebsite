@@ -1,5 +1,5 @@
-var rows = 100;
-var cols = 100;
+var rows = 50;
+var cols = 50;
 var active = false;
 
 var thisGrid = new Array(rows);
@@ -44,7 +44,7 @@ function resetGrid(grid){
 // Table/cell generation code copied from: https://codepen.io/RBSpatz/pen/rLyNLb
 // cell clicker commented out
 function createTable() {
-    var gridContainer = document.getElementById('gameContainer');
+    var gridContainer = document.getElementById("gameContainer");
     if (!gridContainer) {
         console.error("Problem: No div for the drid table!");
     }
@@ -81,9 +81,9 @@ function updateView() {
 function play() {
     computeNextGen();
     
-    if (playing) {
-        timer = setTimeout(play, reproductionTime);
-    }
+    //if (playing) {
+    //    timer = setTimeout(play, reproductionTime);
+    //}
 }
 
 function computeNextGen() { //figures out the next generation by applying neighbour logic
@@ -190,6 +190,16 @@ function countNeighbors(row, col) { //TRY TO IMPLEMENT YOURSELF
     }
 
     return count;
+}
+
+// Initialize
+function initialize() {
+    createTable();
+    initGrid(thisGrid);
+    initGrid(nextGrid);
+    resetGrid(nextGrid);
+    randomGrid(thisGrid);
+    play();
 }
 
 // Start everything
