@@ -6,6 +6,10 @@ body, html {
     cursor: url('resources/glove_idle.png'), auto;
 }
 
+html:active {
+    cursor:url('resources/glove_click.png'), auto; /* url('images/cursor.png') */
+}
+
 .background {
     background-image: url('resources/space2.gif');  /* Replace 'background.jpg' with your image file */
     background-repeat: repeat;  /* Set to 'repeat', 'repeat-x', or 'repeat-y' as needed */
