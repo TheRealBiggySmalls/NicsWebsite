@@ -42,7 +42,7 @@ function resetGrid(grid){
 }
 
 // Table/cell generation code copied from: https://codepen.io/RBSpatz/pen/rLyNLb
-// cell clicker commented out. For later implementation
+// cell clicker commented out
 function createTable() {
     var gridContainer = document.getElementById('gameContainer');
     if (!gridContainer) {
